@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const controller = require('./servicesOrder');
+module.exports = router;
 
 router.get('/pedidos', controller.getOrder);
 

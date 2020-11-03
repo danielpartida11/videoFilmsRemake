@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const controller = require('./servicesUser');
+module.exports = router;
 
 router.get('/usuarios', controller.getUser);
 

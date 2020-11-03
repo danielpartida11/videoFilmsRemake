@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const controller = require('./servicesMovie');
+module.exports = router;
 
 router.get('/peliculas', controller.getMovie);
 

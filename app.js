@@ -5,6 +5,11 @@ const express = require ('express');
 //--------------------------------REQUIRES-----------------------------------------------------------------------
 
 const routerMovie = require('./components/movie/routerMovie.js');
+
+const routerOrder = require('./components/movie/routerOrder.js');
+
+const routerUser = require('./components/movie/routerUser.js');
+
 //---------------------------------------PUERTO Y FUNCION EXPRESS------------------------------------------------
  //app.use(bodyParser.json()); --> Hace lo mismo que express.json
 const app = express();
