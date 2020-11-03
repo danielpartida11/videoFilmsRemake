@@ -6,9 +6,9 @@ const express = require ('express');
 
 const routerMovie = require('./components/movie/routerMovie.js');
 
-const routerOrder = require('./components/movie/routerOrder.js');
+const routerOrder = require('./components/order/routerOrder.js');
 
-const routerUser = require('./components/movie/routerUser.js');
+const routerUser = require('./components/user/routerUser.js');
 
 //---------------------------------------PUERTO Y FUNCION EXPRESS------------------------------------------------
  //app.use(bodyParser.json()); --> Hace lo mismo que express.json
@@ -17,6 +17,8 @@ const PORT = 5000;
 //---------------------------------------PUERTO Y FUNCION EXPRESS------------------------------------------------
 app.use(express.json());
 app.use('/', routerMovie);
+app.use('/', routerOrder);
+app.use('/', routerUser);
 //---------------------------------------CONEXION CON MONGODB----------------------------------------------------
 mongoose.connect('mongodb://localhost:27017/videoFilmsRemake', { //Creacion bbdd peliculas
 useNewUrlParser: true,
