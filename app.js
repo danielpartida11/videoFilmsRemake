@@ -19,4 +19,4 @@ useFindAndModify: false
 })
 .then(() => {console.log('Mongoose conectado')})
 .catch(() => {console.log('Error')});
-//---------------------------------------CONEXION CON MONGODB----------------------------------------------------
+//---------------------------------------CONEXION CON MONGODB-----------------------------------------------------
