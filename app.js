@@ -10,15 +10,20 @@ const routerOrder = require('./components/order/routerOrder.js');
 
 const routerUser = require('./components/user/routerUser.js');
 
+//--------------------------------REQUIRES-----------------------------------------------------------------------
+
 //---------------------------------------PUERTO Y FUNCION EXPRESS------------------------------------------------
  //app.use(bodyParser.json()); --> Hace lo mismo que express.json
 const app = express();
 const PORT = 5000;
 //---------------------------------------PUERTO Y FUNCION EXPRESS------------------------------------------------
+
+//---------------------------------------MIDDLEWARES-------------------------------------------------------------
 app.use(express.json());
 app.use('/', routerMovie);
 app.use('/', routerOrder);
 app.use('/', routerUser);
+//---------------------------------------MIDDLEWARES-------------------------------------------------------------
 //---------------------------------------CONEXION CON MONGODB----------------------------------------------------
 mongoose.connect('mongodb://localhost:27017/videoFilmsRemake', { //Creacion bbdd peliculas
 useNewUrlParser: true,
@@ -30,4 +35,8 @@ useFindAndModify: false
 .catch(() => {console.log('Error')});
 //---------------------------------------CONEXION CON MONGODB-----------------------------------------------------
 
+//---------------------------------------LISTENER----------------------------------------------------------------
+
 app.listen(PORT, () => console.log('El servidor esta corriendo...'));
+
+//-----------------------------------------LISTENER--------------------------------------------------------------
